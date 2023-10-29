@@ -1,9 +1,6 @@
-
-
-
 1) What is React Js?
 ->
-React, sometimes referred to as a frontend JavaScript framework, is a JavaScript library created by Facebook.
+React, sometimes referred to as a frontend JavaScript framework,is a JavaScript library created by Facebook.
 React is a tool for building UI components.
 How does React Work?
 React creates a virtual DOM in memory.
@@ -12,8 +9,6 @@ React only changes what needs to be changed!
 React finds out what changes have been made, and changes only what needs to be changed.
 To get an overview of what React is, you can write React code directly in HTML.
 But in order to use React in production, you need npm and Node.js installed.
-
-
 
 
 
@@ -42,10 +37,6 @@ There are specific reasons to use the deadly combination of Node.js and React fo
 The combination of Node and React allows developers to build dynamic, large, data-driven web apps that are responsive across multiple devices. It would help if you had scalability while working on large projects and maintaining your website’s performance.
 2. MERN Stack
 MERN Stack means MongoDB, Express, React, and Node.js. And no better combo than these frameworks can provide a unique dimension to a website. You can use Node.js with MERN Stack alongside React.js. Hence, you can use the Node and React combination for web app development.
-
-
-
-
 3. JSON APIs
 Creating JSON (JavaScript Object Notation) APIs for web development is competent due to the high code reusability and access to immediate code sharing in React.js. And Node.js can effectively allow this.
 4. Real-Time Data
@@ -56,25 +47,12 @@ When using the combination of React and Node for web app development, you can re
 Does your business require a single-page app with asynchronous data loading? Then, you must select React with Node back-end as it allows building a lightweight back-end model through callback functions.
 7. Single Language for Front-end and Back-end
 With the combination of Node and React, developers don’t require learning complex back-end languages like Python or Ruby. They can use Node for server-side development and React for front-end code building without switching between frameworks and programming languages. And it saves resources, money, and time.
-
-
-
 8. High Server Load
 The combination of Node.js and React can balance the high server requests and load when developers work on web app development.
 9. Organized Process
 The deadly combination of React and Node create an organized web development process. After all, these technologies are scalable, effective, and fast. When working together, they can help you build high-functioning websites.
 10. Increased Use of JavaScript
 Node with React enables the use of the total strength of JavaScript for building front-end and back-end codes. It gives more freedom and convenience when building websites or web apps, as you can use one language for every aspect.
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -108,17 +86,6 @@ npm start
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 5) What is Components in React Js?
 ->Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML.
 Components come in two types, Class components and Function components, in this tutorial we will concentrate on Function components.
@@ -141,16 +108,6 @@ Example
 Function car(){
 return <h2>Hi, I am a car!</h2>
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -198,23 +155,15 @@ create-react-app --version
 Step 4:Now Create a new folder where you want to make your react app using the below command: 
 mkdir newfolder
 cd newfolder (your folder name)
-
-
-
-
 Step 5: Now inside this folder run the command –>
 create-react-app reactfirst YOUR_APP_NAME
-
 Step 6: Now open the IDE of your choice for eg.  Visual studio code and open the folder where you have installed the react app newfolder (in the above example)  inside the folder you will see your app’s name reactapp (In our example). Use the terminal and move inside your app name folder.Use command  cd reactapp (your app name)
-
 Step 7: To start your app run the below command :
 npm start  
 
 npm version:
 npm –version
 npm -v
-
-
 
 
 
@@ -228,9 +177,6 @@ npm install –save react@<version>, where <version> is a variable. You should s
 Let’s take a look at how to downgrade it. I will instal the version 16 of React by running
 $ npm install –save react@16
 Now you can see that my dependencies section of the package.json has been successfully updated.
-
-
-
 
 
 
@@ -254,22 +200,6 @@ You may optionally pass an object as the first argument to setState() instead of
 setState(stateChange[, callback])
 This performs a shallow merge of stateChange into the new state, e.g., to adjust a shopping cart item quantity:
 this.setState({quantity: 2})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
