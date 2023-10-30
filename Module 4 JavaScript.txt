@@ -361,19 +361,11 @@ title = document.getElementById('#geek')
 
 
 
-
-
-
 18.	  Create password field with show hide functionalities
+->
+Code:
 
-	->
-
-
-	Code:
-
-
-
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -406,141 +398,111 @@ title = document.getElementById('#geek')
 
 
 
-	Output:
-
-
- 
-
-
-
-
-
-
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-	19) Create basic math operation in JS .
-	->
-
-
-	Code:
-		
-	<!DOCTYPE html>
+19) Create basic math operation in JS .
+->
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        body{
             font-size: 20px;
-            box-sizing: border-box;
-            font-family: cursive;
-            margin: 0;
-            padding: 0;
+            
         }
-        .container{
-            background: lightgray;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+
+        div{
+            border: 2px solid black;
+            height: 350px;
+            width: 500px;
+            padding: 20px 20px;
+            margin: auto;
         }
-        .calcultor{
-            display: grid;
-            grid-template-columns: repeat(4,1fr);
+
+        button{
+            font-size: 30px;
+            padding: 0px 20px;
+            margin-bottom: 5px;
         }
-        input{
-            grid-column: span 4;
-            border: none;
-            height: 80px;
-            text-align: right;
-        }
-        .symbol{
-            height: 80px;
-            width: 80px;
-            background: white;
-            border-radius: 50%;
+
+        #inp1, #inp2{
+            margin-left: 50px;
+            font-size: 20px;
             text-align: center;
-            margin: 8px;
-            padding: 25px;
+        }
+
+        input{
+            font-size: 30px;
+            
+            
+        }   
+        .b1{
+            margin-left: 25px;
+        }
+        #op{
+            padding: 3px 20px;
+            font-size: 20px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <!-- Main Container Class start-->
-    <div class="container">
-        <!-- calulator class start-->
-        <div class="calcultor">
-            <!-- input filed  -->
-            <input type="text" id="screen">
-            <!-- first row -->
-            <div class="symbol" onclick="wipe()">AC</div>
-            <div class="symbol" onclick="del()">DEL</div>
-            <div class="symbol" onclick="test('%')" >%</div>
-            <div class="symbol" onclick="test('/')">/</div>
-            <!-- second row -->
-            <div class="symbol" onclick="test('7')">7</div>
-            <div class="symbol" onclick="test('8')">8</div>
-            <div class="symbol" onclick="test('9')">9</div>
-            <div class="symbol" onclick="test('*')">*</div>
-            <!-- third row -->
-            <div class="symbol" onclick="test('4')">4</div>
-            <div class="symbol" onclick="test('5')">5</div>
-            <div class="symbol" onclick="test('6')">6</div>
-            <div class="symbol" onclick="test('+')">+</div>
-            <!-- fourth row -->
-            <div class="symbol" onclick="test('1')">1</div>
-            <div class="symbol" onclick="test('2')">2</div>
-            <div class="symbol" onclick="test('3')">3</div>
-            <div class="symbol" onclick="test('-')">-</div>         
-            <!-- fifth row -->
-            <div class="symbol" onclick="calc()">=</div>
-        </div>
-        <!-- calulator class end-->
+
+    <div>    
+    
+    <h1 style="text-align: center;">Maths Operations</h1>
+
+    <form action="">
+
+    <b>Enter 1 number </b> : <input type="text" id="inp1" pattern="[0-9]"> <br><br>
+    <b>Enter 2 number </b> : <input type="text" id="inp2" pattern="[0-9]"> <br><br>
+
+    
+    <input type="button" name="" id="op" value="+" onclick="add()">
+    <input type="button" name="" id="op" value="-" onclick="sub()">
+    <input type="button" name="" id="op" value="*" onclick="mul()"> <span style="margin-left: 120px;font-weight:bold">Answer is:<span id="result"></span></span>  <br> <br>
+    <input type="button" name="" id="op" value="/" onclick="div()">
+    <input type="button" name="" id="op" value="%" onclick="mod()">
+
+
+    </form>
     </div>
-    <!-- Main Container Class end-->
 
     <script>
-        //input tag id called
-        op=document.getElementById('screen');
-        op.value="";
+     
+        function add(){    
+                num1 = parseInt(document.getElementById("inp1").value);
+                num2 = parseInt(document.getElementById("inp2").value);
+                res = document.getElementById("result").innerHTML = num1  + num2;
+        }
 
-        //function wipe for remove text from screen
-        function wipe()
-        {
-            op.value="";
+        function sub(){    
+                num1 =  parseInt(document.getElementById("inp1").value);
+                num2 = parseInt(document.getElementById("inp2").value);
+                res = document.getElementById("result").innerHTML = num1-num2;
         }
-        //function del for delete text from screen
-        function del()
-        {
-            op.value = op.value.slice(0,-1);
+
+        function mul(){    
+                num1 =  parseInt(document.getElementById("inp1").value);
+                num2 = parseInt(document.getElementById("inp2").value);
+                res = document.getElementById("result").innerHTML = num1*num2;
         }
-        //function test for adding text in screen
-        function test(e)
-        {
-            //console.log(e);
-            op.value=op.value+e;
+
+        function div(){    
+                num1 =  parseInt(document.getElementById("inp1").value);
+                num2 = parseInt(document.getElementById("inp2").value);
+                res = document.getElementById("result").innerHTML = num1/num2;
         }
-        //function calc for calculate operations
-        function calc(){
-            op.value=eval(op.value);
+
+        function mod(){    
+                num1 =  parseInt(document.getElementById("inp1").value);
+                num2 = parseInt(document.getElementById("inp2").value);
+                res = document.getElementById("result").innerHTML = num1%num2;
         }
 
     </script>
+
 </body>
 </html>
 
@@ -548,36 +510,10 @@ title = document.getElementById('#geek')
 
 
 
-	Output:
 
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	20) Create result
-	->
-
-
-	Code:
+20) Create result
+->
+Code:
 
 	<!DOCTYPE html>
 <html lang="en">

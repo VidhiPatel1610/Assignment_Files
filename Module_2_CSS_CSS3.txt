@@ -1097,5 +1097,106 @@ Code:
 
 
  
+23)Multiple background one side bg-color other side contain image as bg
+->
 
+Code:
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <style>
+        .main{
+            height: 600px;
+            display: flex;
+            position: relative;
+        }
+
+        .color{
+            background-color: black;
+            width: 50%;
+            border: 2px solid;
+            padding-top: 50px;
+            padding-right: 40px;
+            /* margin-right: 20px; */
+            text-align: end;
+        }
+
+        h2{
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            margin-bottom: 70px;
+            padding-right: 20px;
+        }
+
+        h4{
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(210, 63, 30);
+        }
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+            color: gray;
+        }
+        .img{
+            width: 50%;
+            background-image: url(./Images/laptop.jpg);
+            background-size: 100% 100%;
+        }
+        button{
+            border-radius: 100%;
+            padding: 10px;
+            display: block; 
+            font-size: 20px;
+            color: rgb(210, 63, 30);
+        }
+
+        .b1{
+            position: absolute;
+            top: 34%;
+            left: 50%;
+        }
+
+        .b2{
+            position: absolute;
+            top: 49%;
+            left: 50%;
+        }
+
+        .b3{
+            position: absolute;
+            top: 64%;
+            left: 50%;
+        }
+        .border{
+            height: 30px;
+            border-right: 5px solid rgb(210, 63, 30);
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <div class="color">
+            <h2 class="border">OUR SERVICES</h2>
+            <h4>Web Design</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Doloremque omnis deserunt fugiat.</p> 
+    
+            <h4>Web Design</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Doloremque omnis deserunt fugiat.</p> 
+            <h4>Web Design</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Doloremque omnis deserunt fugiat.</p> 
+        </div>
+            <div class="img"></div>
+    </div>
+
+    <button class="b1"><i class="fa-solid fa-laptop"></i></button>
+    <button class="b2"><i class="fa-solid fa-print"></i></button>
+    <button class="b3"><i class="fa-solid fa-camera"></i></button>
+</body>
+</html>
